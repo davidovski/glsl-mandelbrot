@@ -3,7 +3,7 @@ precision highp float;
 
 uniform vec2 resolution;
 uniform vec2 location;
-uniform double zoom;
+uniform float zoom;
 
 uniform int max;
 
