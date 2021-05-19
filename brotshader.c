@@ -23,10 +23,10 @@ int main() {
 	
 	float screen[2] = {(float)width, (float)height};
 
-	SetShaderValue(shader, resolutionLoc, screen, UNIFORM_VEC2);
-	SetShaderValue(shader, locationLoc, &offset, UNIFORM_VEC2);
-	SetShaderValue(shader, zoomLoc, &zoom, UNIFORM_FLOAT);
-	SetShaderValue(shader, maxLoc, &max, UNIFORM_INT);
+	SetShaderValue(shader, resolutionLoc, screen, SHADER_UNIFORM_VEC2);
+	SetShaderValue(shader, locationLoc, &offset, SHADER_UNIFORM_VEC2);
+	SetShaderValue(shader, zoomLoc, &zoom, SHADER_UNIFORM_FLOAT);
+	SetShaderValue(shader, maxLoc, &max, SHADER_UNIFORM_INT);
 
 	SetTargetFPS(60);
 
@@ -42,10 +42,10 @@ int main() {
 		if (IsKeyDown(KEY_A)) max -= 1;
 		if (IsKeyDown(KEY_D)) max += 1;
 
-		SetShaderValue(shader, resolutionLoc, screen, UNIFORM_VEC2);
-		SetShaderValue(shader, locationLoc, &offset, UNIFORM_VEC2);
-		SetShaderValue(shader, zoomLoc, &zoom, UNIFORM_FLOAT);
-		SetShaderValue(shader, maxLoc, &max, UNIFORM_INT);
+		SetShaderValue(shader, resolutionLoc, screen, SHADER_UNIFORM_VEC2);
+		SetShaderValue(shader, locationLoc, &offset, SHADER_UNIFORM_VEC2);
+		SetShaderValue(shader, zoomLoc, &zoom, SHADER_UNIFORM_FLOAT);
+		SetShaderValue(shader, maxLoc, &max, SHADER_UNIFORM_INT);
 
 		BeginDrawing();
 
